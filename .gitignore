@@ -31,3 +31,9 @@
 *.out
 *.app
 routemonitor.vcxproj.user
+GeneratedFiles/Debug/moc_MainWindow.cpp
+GeneratedFiles/Debug/moc_ScaleBarRefresh.cpp
+GeneratedFiles/Debug/moc_UDPServer.cpp
+*.log
+*.tlog
+routemonitor.dir/Debug/vc120.pdb
