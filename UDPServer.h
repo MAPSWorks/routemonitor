@@ -13,7 +13,7 @@ class UDPServer : public QObject
 	Q_OBJECT
 
 public:
-	UDPServer(osg::Geode* pGeode, double& dLon, double& dLat, double& dAngle, int nPort
+	UDPServer(osg::Geode* pGeode, int nPort
 		, osgViewer::ViewerBase*, osgEarth::Annotation::MyPlaceNode*, QObject *parent = nullptr);
 	~UDPServer();
 
@@ -24,10 +24,6 @@ public:
 	osgEarth::Annotation::MyPlaceNode* m_pPlaneNode;
 
 	osg::ref_ptr<osg::Vec3dArray> m_verticesPlanePath;
-
-	double& m_dLon;
-	double& m_dLat;
-	double& m_dAngle;
 
 	int m_nPort;
 

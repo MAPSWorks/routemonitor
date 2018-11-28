@@ -20,7 +20,7 @@ double g_dTargetPosLat = 0.0;
 
 bool g_bPlaneMove = true;
 
-UDPServer::UDPServer(osg::Geode* pGeode, double& dLon, double& dLat, double& dAngle, int nPort
+UDPServer::UDPServer(osg::Geode* pGeode, int nPort
 	, osgViewer::ViewerBase* pViewer, osgEarth::Annotation::MyPlaceNode* pLocalGeometryNode, QObject *parent)
 	: QObject(parent), m_dLon(dLon), m_dLat(dLat), m_dAngle(dAngle)
 {
@@ -79,15 +79,6 @@ void UDPServer::readPendingDatagrams()
 
 		if (!g_bPlaneMove)
 			return;
-
-		m_dLon = dLon;
-		m_dLat = dLat;
-		m_dAngle = dAngle;
-
-		//printf("%s\n", datagram.data());
-		//emit sigPosChanged(d1, d2);
-
-		//m_pView->getEventQueue()->userEvent(new GPSPosEvent(d1, d2));
 
 		if (m_nPort == 6665)
 		{
